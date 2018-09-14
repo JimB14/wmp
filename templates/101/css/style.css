@@ -1,0 +1,751 @@
+/* 
+    Created on : Oct 26, 2015, 4:01:37 PM
+    Author     : Jim
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+html{font-family: "News Cycle", sans-serif;}
+body {
+    position: relative; // The element with data-spy="scroll" requires the CSS position property, with a value of "relative" to work properly.
+    font-family: "Open Sans", sans-serif;  /*"Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #606060;
+    background-color: #fff;
+}
+
+.affix {
+    top: 0px;
+    width: 100%;
+    z-index:999;
+}
+.affix + .top-margin-marker {
+    padding-top: 170px;  //265px;
+}
+.affix + .container {
+    padding-top: 100px;  //265px;
+}
+
+
+/*---------------- Site-wide ---------------------*/
+/* Theme colors */
+.maroon {color: #AC2925;}
+.black {color: #222222;}
+.green-success {color: #449D44;}
+
+/*---------------- Formatting --------------------*/
+.p1{margin-bottom: 1em;}
+.p2{margin-bottom: 2em;}
+.p3{margin-bottom: 3em;}
+.p4{margin-bottom: 4em;}
+.p5{margin-bottom: 5em;}
+.text-size80{font-size:80%;}
+.text-size85{font-size:85%;}
+.text-size110{font-size:110%;}
+.text-size120{font-size:120%;}
+.text-size130{font-size:130%;}
+.text-size140{font-size:140%;}
+.text-size150{font-size:150%;}
+.text-size200{font-size:200%;}
+.text-size300{font-size:300%;}
+.text-size400{font-size:400%;}
+.t1{margin-top: 1em;}
+.t2{margin-top: 2em;}
+.t3{margin-top: 3em;}
+.tminus05{margin-top: -0.5em;}
+.tminus1{margin-top: -1em;}
+.tminus2{margin-top: -2em;}
+.m-left10{margin-left: 10px;}
+.m-left15{margin-left: 15px;}
+.m-left20{margin-left: 20px;}
+.bold{font-weight: bold;}
+.pr10{padding-right: 10px;}
+.pr15{padding-right: 15px;}
+.pr20{padding-right: 20px;}
+.pl10{padding-left: 10px;}
+.pl15{padding-left: 15px;}
+.pl20{padding-left: 20px;}
+.ptop10 {padding-top: 10px;}
+.ptop20 {padding-top: 20px;}
+.ptop30 {padding-top: 30px;}
+.gray-convert {   
+    filter: grayscale(90%);
+    -webkit-filter: grayscale(90%);
+}
+.text95{font-size: 95%;}
+.text90{font-size: 90%;}
+
+.strikeout {
+  //font-size: 4em;
+  line-height: 1em;
+  position: relative;
+}
+.strikeout::after {
+  border-bottom: 0.125em solid red;
+  content: "";
+  left: 0;
+  margin-top: calc(0.125em / 2 * -1);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+
+/*---------- Custom button ---------------------*/
+/* btn-101 */
+
+.btn-101 {
+  color: #fff;
+  background-color: #ac2925;
+  border-color: #ac2925;
+}
+.btn-101:focus,
+.btn-101.focus {
+  color: #fff;
+  background-color: #6d1a17;
+  border-color: #6d1a17;
+}
+.btn-101:hover {
+  color: #fff;
+  background-color: #6d1a17;
+  border-color: #6d1a17;
+}
+.btn-101:active,
+.btn-101.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #6d1a17;
+  border-color: #adadad;
+}
+.btn-101:active:hover,
+.btn-101.active:hover,
+.open > .dropdown-toggle.btn-101:hover,
+.btn-101:active:focus,
+.btn-101.active:focus,
+.open > .dropdown-toggle.btn-101:focus,
+.btn-101:active.focus,
+.btn-101.active.focus,
+.open > .dropdown-toggle.btn-101.focus {
+  color: #fff;
+  background-color: #6d1a17;
+  border-color: #6d1a17;
+}
+.btn-101:active,
+.btn-101.active,
+.open > .dropdown-toggle.btn-101 {
+  background-image: none;
+}
+.btn-101.disabled,
+.btn-101[disabled],
+fieldset[disabled] .btn-101,
+.btn-101.disabled:hover,
+.btn-101[disabled]:hover,
+fieldset[disabled] .btn-101:hover,
+.btn-101.disabled:focus,
+.btn-101[disabled]:focus,
+fieldset[disabled] .btn-101:focus,
+.btn-101.disabled.focus,
+.btn-101[disabled].focus,
+fieldset[disabled] .btn-101.focus,
+.btn-101btn-101.disabled:active,
+.btn-101[disabled]:active,
+fieldset[disabled] .btn-101:active,
+.btn-101.disabled.active,
+.btn-101[disabled].active,
+fieldset[disabled] .btn-101.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-101 .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+/* Tooltip */
+  .tooltip > .tooltip-inner {
+      background-color: #fff; 
+      color: #606060;  //#45B3E8; 
+      border: 1px solid #ccc;  //#45B3E8; 
+      padding: 5px 10px;
+      font-size: 14px;
+  }
+.text-tooltip {color: #606060;border-bottom: 1px dotted #ccc;}
+.text-tooltip:hover {text-decoration: none;}
+
+
+/*---------------- #top page -------------------*/
+
+.navbar{border-bottom: #ac2925 4px solid;}
+
+/* Portrait:  iPhone4, iPhone5 */
+@media (max-width: 321px){
+    .company-name-header{font-size:100%;}
+    .header-row, .header-row-logo {position:relative; top:0px;}
+    .header-height{height: auto;}
+    .affix + .container-fluid {padding-top:195px;}
+}
+/* Portrait: iPhone6, iPhone6 Plus; 
+ * Landscape: iPhone4, iPhone5, iPhone6, iPhone6 Plus 
+*/
+@media (min-width: 322px) and (max-width:736px){
+    .company-name-header{font-size:120%;}
+    .header-row, .header-row-logo {position:relative; top:0px;}
+    .header-height{height: auto;}
+    .affix + .container-fluid {padding-top:195px;}
+}
+
+@media (min-width:768px) {
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-form {
+        border: none;
+    }
+}
+
+
+
+/*---------------- Section1 - Carousel -------------------*/
+#top {
+    padding-top: 93px;
+    //background-color: #c1c8ce;
+    margin-bottom: 20px;
+}
+#top .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #FFF;
+}
+
+#top .carousel-indicators li {
+    border-color: #FFF;
+}
+#top .carousel-indicators li.active {
+    background-color: #FFF;
+}
+#top a {color: #fff; font-size:95%;}
+
+/*------- KEY CODE to cause image to grow with window expansion ---------*/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+}
+
+
+
+@media (max-width:626px){
+    .carousel-caption,
+    .carousel-indicators {display:none;} 
+}
+
+
+/*-------------- Header-bar --------------------*/
+#header-bar em {
+    font-family: "Shadows Into Light Two", cursive; 
+    color:#AC2925;
+    text-shadow: 2px 2px 2px #000;
+}
+#header-bar {background-color: #222; color:#fff;border-bottom: #ac2925 4px solid;}
+
+
+/*-------------- Advertise --------------------*/
+
+#special299 {
+    font-size: 17px;
+}
+#special299 .modal-detail-list {list-style:none; padding:0;}
+#special299 .modal-detail-list li {padding-left:10px;}
+#special299 span.glyphicon {padding-right: 12px;}
+#special299 span.glyphicon-ok {color:#449D44;}
+#special299 span.glyphicon-remove {color:#ff3333;}
+
+#myModal .modal-dialog {
+  width: 85%; 
+}
+
+.glyphicon-arrow-right,
+.glyphicon-arrow-left {display: relative; top:13px;}
+
+
+/*-------------- Section2 - Services --------------------*/
+#services {padding-top: 130px;}
+#services em {
+    font-family: "Shadows Into Light Two", cursive; 
+    color:#AC2925;
+    text-shadow: 2px 2px 2px #000;
+}
+#services {
+    font-size: 18px;
+}
+#services i {color:#AC2925;}
+
+.box {
+  background:#fff;
+  transition:all 0.2s ease;
+  border:2px dotted #dadada;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-clip: padding-box;
+  padding:0 20px 20px 20px;
+  min-height:340px;
+}
+
+.box:hover {
+  border:2px solid #AC2925;  //#525C7A;
+}
+
+.box .box-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.box .box-content p {
+  color:#515c66;
+  text-transform:none;
+}
+
+/*------------ Section3 - About Us ---------------*/
+#about {position:relative; padding-top: 90px; text-align:center}
+#about p {
+    font-size: 18px; 
+    //letter-spacing: 1px;
+    line-height: 1.6em;
+     //margin: 0 10px;
+}
+
+span.glyphicon-signal{
+    font-size: 1000%;
+}
+
+@media (max-width: 667px){
+    #about .services{
+        border-bottom: 1px dashed #ccc; 
+        padding: 20px 0; 
+        margin: 0 65px;
+    }
+    #about p {text-align:center;}
+}
+
+/* Triangles for each section  */
+
+.white-triangle {
+    position: absolute;
+    top: 0;
+    left: 48.5%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 25px 0 25px;
+    border-color: #ffffff transparent transparent transparent;
+    z-index:999;
+}
+
+.yellow-triangle {
+    position: absolute;
+    top: 0;
+    left: 48.5%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 25px 0 25px;
+    border-color: #FFFFE6 transparent transparent transparent; //#FFFFE6
+}
+
+.beige-triangle {
+    position: absolute;
+    top: 0;
+    left: 48.5%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 25px 0 25px;
+    border-color: #F4F5EC transparent transparent transparent;
+}
+
+.gray-triangle {
+    position: absolute;
+    top: 0;
+    left: 48.5%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 25px 0 25px;
+    border-color: #ECECEC transparent transparent transparent;
+}
+
+
+/*------------ Section4 - Testimonials ---------------*/
+#testimonials {position:relative;padding-top: 90px;text-align:center}
+#testimonials .carousel-indicators {top:88px;}
+
+#testimonials .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #AC2925;
+}
+#testimonials .carousel-indicators li {
+    border-color: #000;
+}
+#testimonials  .carousel-indicators li.active {
+    background-color: #AC2925;
+}
+
+
+/*------------- Section5 - Our Team -------------------*/
+#team {position:relative;padding-top: 90px;text-align:center}
+#team {
+    font-size: 15px;
+    color: #606060; 
+}
+#team p {
+    font-size:15px; 
+    //letter-spacing: 1px;
+    line-height: 1.6em;
+}
+#team span.job-description {
+    display: inline-block;
+    font-size:12px; 
+    text-align: left;
+}
+
+#team .panel-body {
+    position: relative;
+    overflow: hidden;
+    border-bottom: #ddd solid 1px;
+}
+
+#team .panel-body img {
+    transition-property: all;
+    transition-duration: .5s;
+    display: block;
+}
+
+#team .panel-body img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#team .panel-default:hover {
+    border: #AC2925 2px solid;
+    border-radius: 4px;
+}
+
+#team .panel-footer p {
+    border-bottom: #db5c58 dotted 1px;
+}
+
+#team .panel-footer {
+    background-color: #fff;
+}
+/*
+#team .panel-body {
+    background-color:  #f7dad9; //url("../images/bg/beach.jpg");
+}
+*/
+
+
+/*-------------Section6 - Projects --------------------*/
+#projects {position:relative;padding-top: 90px;text-align:center}
+#projects {
+    font-size: 15px;
+    color: #606060; 
+}
+
+#projects .title{
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4) !important;    
+}
+
+#projects .divider-title{
+    border:1px solid #dddddd;
+}
+
+#projects .project {
+    margin-bottom: 30px;
+    vertical-align: top;
+    margin-right: 30px;
+    float: left;
+    cursor: pointer;
+    width:100%;
+}
+
+#projects .project figure {
+    position: relative;
+    display: inline-block;
+    width: 283px;
+    -moz-box-shadow: 0 3px 0 #e2e2e2,transparent 0 0 0;
+    -webkit-box-shadow: 0 3px 0 #e2e2e2,transparent 0 0 0;
+    box-shadow: 0 3px 0 #e2e2e2,transparent 0 0 0;
+    -webkit-box-shadow: 0 3px 0 #e2e2e2;
+    -moz-box-shadow: 0 3px 0 #e2e2e2;
+    box-shadow: 0 3px 0 #e2e2e2;
+}
+
+#projects .project figure figcaption {
+    position: relative;
+    z-index: 10;
+    padding: 8px 18px 11px;
+    background: #fff;
+    -ms-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    text-align: left;
+    color: #555;
+}
+
+#projects .project figure:hover .actions {
+    opacity: 1;
+}
+
+#projects .project figure .actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(29,29,29,.7);
+    -ms-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+#projects .project figure img {
+    border: 0;
+    width: 100%;
+}
+#projects .btn-warning{
+    margin: 0% 0% auto;    
+}
+
+#projects figcaption .project-details {
+    display: block;
+    font-size: 16px;
+    line-height: 33px;
+    color: #0093d0;
+    height: 27px;
+    width: 85%;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+#projects figcaption .project-price {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 22px;
+    text-align: right;
+    margin-top: 8px;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+}
+
+#projects figcaption .project-creator {
+    font-size: 13px;
+    color: #545454;
+    display: block;
+}
+
+#projects figcaption .project-creator {
+    font-size: 13px;
+    color: #545454;
+    display: block;
+}
+
+#projects .project figure .actions button {
+    padding: 13px 20px;
+    font-size: 16px;
+    top: 32%;
+    position: absolute;
+    left: 50%;
+    width: 90%;
+    margin-left: -45%;
+    line-height: 18px;
+    letter-spacing: 1px;
+}                    
+
+
+
+
+/*-------------- Section7 - Clients --------------*/
+#clients {position:relative;padding-top: 90px;text-align:center}
+#clients {
+    font-size: 15px;
+    color: #606060; 
+}
+.carousel-inner img {margin: auto;} // centers images in slider
+#portfolio .item,
+#logo-carousel .item {
+    margin: 3px;
+}
+#portfolio .item img,
+#logo-carousel .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#logo-carousel .item img{
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%); /* make all photos black and white */ 
+    opacity: .8;
+    height:200px;
+    width: 200px;
+}
+#logo-carousel .owl-wrapper-outer {
+    margin-bottom: -56px;
+    margin-top: -78px;
+}
+
+
+/*-------------- Section8 - Contact --------------*/
+#contact {position:relative;padding-top: 90px;text-align:center}
+#contact .panel-heading {background-color: #ac2925; color:#fff;}
+#contact .panel-heading {border-color: #ac2925;}
+
+
+
+
+
+
+
+/*-------------- Section9 - Footer ---------------*/
+#footer {border-top: #ac2925 4px solid;}
+#footer {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    color: #fff;
+}
+
+#footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+#footer h3 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+}
+  
+  @media (max-width: 767px) {
+      #footer {text-align: center;}
+  }
+  
+
+/*-------------- Social bar ---------------*/
+/* http://bootsnipp.com/snippets/featured/spinning-social-icons */
+#social-bar {text-align: center;}
+
+/*=========================  Icons  ================= */
+
+/* footer social icons */
+#social-bar ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+#social-bar ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+/* footer social icons */
+#social-bar .social-network a.icoRss:hover {
+	background-color: #F56505;
+}
+#social-bar .social-network a.icoFacebook:hover {
+	background-color:#3B5998;
+}
+#social-bar .social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+#social-bar .social-network a.icoGoogle:hover {
+	background-color:#BD3518;
+}
+#social-bar .social-network a.icoVimeo:hover {
+	background-color:#0590B8;
+}
+#social-bar .social-network a.icoLinkedin:hover {
+	background-color:#007bb7;
+}
+#social-bar .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+#social-bar .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+	color:#fff;
+}
+
+
+#social-bar .social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 30px;
+	height: 30px;
+	font-size:20px;
+}
+#social-bar .social-circle li i {
+	margin:0;
+	line-height:29px;
+	text-align: center;
+}
+
+#social-bar .social-circle li a:hover i {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+#social-bar .social-circle i {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+#social-bar a {
+ //background-color: #D3D3D3;  // displays circular background 
+}
+
+@media (max-width: 400px){
+   #footer .tos{
+       text-align: center !important;
+   }
+}
+
+
+
+/*---------------  Portfolio  -----------------*/
+.photo-list {list-style-type: none; margin: 0; padding: 0;}
+.photo-list li {display: inline;}
+.photo-list img {border: #E4E6ED solid 1px; padding:5px; border-radius: 5px; margin:5px;}
+
+.list-no-style {list-style-type: none;}
+.list-no-style i {color: #00cd00;}
+.list-no-style li {margin-left:-33px;}
+
+.portfolio-company-name-box {height:121px;}
+
+/*----------- Contact ------------------*/
+.list-group-item.active, 
+.list-group-item.active:hover, 
+.list-group-item.active:focus {
+    background-color: #45B3E8;
+    border-color: #45B3E8;
+}
